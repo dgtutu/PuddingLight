@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5E3EA2FCA08332C0237E3C68 /* libPods-PuddingLight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DDAB7AA4E7AC8509E7FE5BC /* libPods-PuddingLight.a */; };
 		B5D8D3E324D26E2000236D6F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D8D3E224D26E2000236D6F /* AppDelegate.swift */; };
 		B5D8D3E524D26E2000236D6F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D8D3E424D26E2000236D6F /* SceneDelegate.swift */; };
 		B5D8D3E724D26E2000236D6F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D8D3E624D26E2000236D6F /* ViewController.swift */; };
@@ -16,6 +17,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		459D8B82375D09659FBEC426 /* Pods-PuddingLight.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PuddingLight.debug.xcconfig"; path = "Target Support Files/Pods-PuddingLight/Pods-PuddingLight.debug.xcconfig"; sourceTree = "<group>"; };
+		645386E328647348550F07EA /* Pods-PuddingLight.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PuddingLight.release.xcconfig"; path = "Target Support Files/Pods-PuddingLight/Pods-PuddingLight.release.xcconfig"; sourceTree = "<group>"; };
+		7DDAB7AA4E7AC8509E7FE5BC /* libPods-PuddingLight.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PuddingLight.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5D8D3DF24D26E2000236D6F /* PuddingLight.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PuddingLight.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5D8D3E224D26E2000236D6F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B5D8D3E424D26E2000236D6F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -31,17 +35,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E3EA2FCA08332C0237E3C68 /* libPods-PuddingLight.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6544EAD31DA9F454C8D7F972 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7DDAB7AA4E7AC8509E7FE5BC /* libPods-PuddingLight.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		B5D8D3D624D26E2000236D6F = {
 			isa = PBXGroup;
 			children = (
 				B5D8D3E124D26E2000236D6F /* PuddingLight */,
 				B5D8D3E024D26E2000236D6F /* Products */,
+				EE4320B92E38F981AD7AFCB4 /* Pods */,
+				6544EAD31DA9F454C8D7F972 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +82,16 @@
 			path = PuddingLight;
 			sourceTree = "<group>";
 		};
+		EE4320B92E38F981AD7AFCB4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				459D8B82375D09659FBEC426 /* Pods-PuddingLight.debug.xcconfig */,
+				645386E328647348550F07EA /* Pods-PuddingLight.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,6 +99,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B5D8D3F324D26E2100236D6F /* Build configuration list for PBXNativeTarget "PuddingLight" */;
 			buildPhases = (
+				6C6FC20263C5F2C0F9F4FFAC /* [CP] Check Pods Manifest.lock */,
 				B5D8D3DB24D26E2000236D6F /* Sources */,
 				B5D8D3DC24D26E2000236D6F /* Frameworks */,
 				B5D8D3DD24D26E2000236D6F /* Resources */,
@@ -132,6 +158,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6C6FC20263C5F2C0F9F4FFAC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PuddingLight-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B5D8D3DB24D26E2000236D6F /* Sources */ = {
@@ -282,6 +333,7 @@
 		};
 		B5D8D3F424D26E2100236D6F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 459D8B82375D09659FBEC426 /* Pods-PuddingLight.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -300,6 +352,7 @@
 		};
 		B5D8D3F524D26E2100236D6F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 645386E328647348550F07EA /* Pods-PuddingLight.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

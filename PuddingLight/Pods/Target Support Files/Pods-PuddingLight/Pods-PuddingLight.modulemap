@@ -1,0 +1,6 @@
+module Pods_PuddingLight {
+  umbrella header "Pods-PuddingLight-umbrella.h"
+
+  export *
+  module * { export * }
+}
