@@ -8,26 +8,58 @@
 
 /* Begin PBXBuildFile section */
 		5E3EA2FCA08332C0237E3C68 /* libPods-PuddingLight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DDAB7AA4E7AC8509E7FE5BC /* libPods-PuddingLight.a */; };
+		B524268824D476C000776B3F /* DrawView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B524268724D476C000776B3F /* DrawView.swift */; };
+		B524268A24D5104800776B3F /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B524268924D5104800776B3F /* MainViewController.swift */; };
+		B524268C24D5199700776B3F /* SingleManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = B524268B24D5199700776B3F /* SingleManger.swift */; };
+		B524268E24D51FF200776B3F /* HsiMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = B524268D24D51FF200776B3F /* HsiMenu.swift */; };
+		B524269024D5200200776B3F /* HsiMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = B524268F24D5200200776B3F /* HsiMenu.xib */; };
+		B538324E24D80A8500D2F24C /* CctMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = B538324D24D80A8500D2F24C /* CctMenu.swift */; };
+		B538325024D80A8E00D2F24C /* CctMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = B538324F24D80A8E00D2F24C /* CctMenu.xib */; };
+		B538325324D8FAC700D2F24C /* RgbMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = B538325224D8FAC700D2F24C /* RgbMenu.xib */; };
+		B538325524D8FAD100D2F24C /* RgbMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = B538325424D8FAD100D2F24C /* RgbMenu.swift */; };
 		B5D8D3E324D26E2000236D6F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D8D3E224D26E2000236D6F /* AppDelegate.swift */; };
 		B5D8D3E524D26E2000236D6F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D8D3E424D26E2000236D6F /* SceneDelegate.swift */; };
-		B5D8D3E724D26E2000236D6F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D8D3E624D26E2000236D6F /* ViewController.swift */; };
 		B5D8D3EA24D26E2000236D6F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5D8D3E824D26E2000236D6F /* Main.storyboard */; };
 		B5D8D3EC24D26E2100236D6F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5D8D3EB24D26E2100236D6F /* Assets.xcassets */; };
 		B5D8D3EF24D26E2100236D6F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5D8D3ED24D26E2100236D6F /* LaunchScreen.storyboard */; };
+		B5D8D41824D3B84E00236D6F /* FloatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D8D41724D3B84E00236D6F /* FloatViewController.swift */; };
+		B5D8D41A24D3C56900236D6F /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D8D41924D3C56900236D6F /* BaseViewController.swift */; };
+		B5D8D42024D3F0E800236D6F /* HsiDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D8D41F24D3F0E800236D6F /* HsiDelegate.swift */; };
+		B5D8D42524D3F13D00236D6F /* HsiTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D8D42324D3F13D00236D6F /* HsiTableViewCell.swift */; };
+		B5D8D42624D3F13D00236D6F /* HsiTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5D8D42424D3F13D00236D6F /* HsiTableViewCell.xib */; };
+		B5D8D42F24D44D2300236D6F /* SeDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D8D42E24D44D2300236D6F /* SeDelegate.swift */; };
+		B5D8D43224D44DC600236D6F /* SeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D8D43024D44DC600236D6F /* SeTableViewCell.swift */; };
+		B5D8D43324D44DC600236D6F /* SeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5D8D43124D44DC600236D6F /* SeTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		459D8B82375D09659FBEC426 /* Pods-PuddingLight.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PuddingLight.debug.xcconfig"; path = "Target Support Files/Pods-PuddingLight/Pods-PuddingLight.debug.xcconfig"; sourceTree = "<group>"; };
 		645386E328647348550F07EA /* Pods-PuddingLight.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PuddingLight.release.xcconfig"; path = "Target Support Files/Pods-PuddingLight/Pods-PuddingLight.release.xcconfig"; sourceTree = "<group>"; };
 		7DDAB7AA4E7AC8509E7FE5BC /* libPods-PuddingLight.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PuddingLight.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B524268724D476C000776B3F /* DrawView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawView.swift; sourceTree = "<group>"; };
+		B524268924D5104800776B3F /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		B524268B24D5199700776B3F /* SingleManger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleManger.swift; sourceTree = "<group>"; };
+		B524268D24D51FF200776B3F /* HsiMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HsiMenu.swift; sourceTree = "<group>"; };
+		B524268F24D5200200776B3F /* HsiMenu.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HsiMenu.xib; sourceTree = "<group>"; };
+		B538324D24D80A8500D2F24C /* CctMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CctMenu.swift; sourceTree = "<group>"; };
+		B538324F24D80A8E00D2F24C /* CctMenu.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CctMenu.xib; sourceTree = "<group>"; };
+		B538325224D8FAC700D2F24C /* RgbMenu.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RgbMenu.xib; sourceTree = "<group>"; };
+		B538325424D8FAD100D2F24C /* RgbMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RgbMenu.swift; sourceTree = "<group>"; };
 		B5D8D3DF24D26E2000236D6F /* PuddingLight.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PuddingLight.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5D8D3E224D26E2000236D6F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B5D8D3E424D26E2000236D6F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		B5D8D3E624D26E2000236D6F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B5D8D3E924D26E2000236D6F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B5D8D3EB24D26E2100236D6F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B5D8D3EE24D26E2100236D6F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B5D8D3F024D26E2100236D6F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B5D8D41724D3B84E00236D6F /* FloatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatViewController.swift; sourceTree = "<group>"; };
+		B5D8D41924D3C56900236D6F /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		B5D8D41F24D3F0E800236D6F /* HsiDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HsiDelegate.swift; sourceTree = "<group>"; };
+		B5D8D42324D3F13D00236D6F /* HsiTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HsiTableViewCell.swift; sourceTree = "<group>"; };
+		B5D8D42424D3F13D00236D6F /* HsiTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HsiTableViewCell.xib; sourceTree = "<group>"; };
+		B5D8D42E24D44D2300236D6F /* SeDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeDelegate.swift; sourceTree = "<group>"; };
+		B5D8D43024D44DC600236D6F /* SeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeTableViewCell.swift; sourceTree = "<group>"; };
+		B5D8D43124D44DC600236D6F /* SeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SeTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,6 +80,47 @@
 				7DDAB7AA4E7AC8509E7FE5BC /* libPods-PuddingLight.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B524269124D56F7400776B3F /* Hsi */ = {
+			isa = PBXGroup;
+			children = (
+				B5D8D42324D3F13D00236D6F /* HsiTableViewCell.swift */,
+				B5D8D42424D3F13D00236D6F /* HsiTableViewCell.xib */,
+				B524268724D476C000776B3F /* DrawView.swift */,
+				B5D8D41F24D3F0E800236D6F /* HsiDelegate.swift */,
+				B524268D24D51FF200776B3F /* HsiMenu.swift */,
+				B524268F24D5200200776B3F /* HsiMenu.xib */,
+			);
+			path = Hsi;
+			sourceTree = "<group>";
+		};
+		B524269224D5741100776B3F /* Cct */ = {
+			isa = PBXGroup;
+			children = (
+				B538324D24D80A8500D2F24C /* CctMenu.swift */,
+				B538324F24D80A8E00D2F24C /* CctMenu.xib */,
+			);
+			path = Cct;
+			sourceTree = "<group>";
+		};
+		B538325124D8FA9500D2F24C /* Rgb */ = {
+			isa = PBXGroup;
+			children = (
+				B538325224D8FAC700D2F24C /* RgbMenu.xib */,
+				B538325424D8FAD100D2F24C /* RgbMenu.swift */,
+			);
+			path = Rgb;
+			sourceTree = "<group>";
+		};
+		B538325A24D9366100D2F24C /* Se */ = {
+			isa = PBXGroup;
+			children = (
+				B5D8D42E24D44D2300236D6F /* SeDelegate.swift */,
+				B5D8D43024D44DC600236D6F /* SeTableViewCell.swift */,
+				B5D8D43124D44DC600236D6F /* SeTableViewCell.xib */,
+			);
+			path = Se;
 			sourceTree = "<group>";
 		};
 		B5D8D3D624D26E2000236D6F = {
@@ -73,13 +146,44 @@
 			children = (
 				B5D8D3E224D26E2000236D6F /* AppDelegate.swift */,
 				B5D8D3E424D26E2000236D6F /* SceneDelegate.swift */,
-				B5D8D3E624D26E2000236D6F /* ViewController.swift */,
-				B5D8D3E824D26E2000236D6F /* Main.storyboard */,
+				B5D8D40424D2AEFE00236D6F /* UI */,
+				B5D8D40624D2AF2300236D6F /* Model */,
+				B5D8D40524D2AF1300236D6F /* Controller */,
 				B5D8D3EB24D26E2100236D6F /* Assets.xcassets */,
-				B5D8D3ED24D26E2100236D6F /* LaunchScreen.storyboard */,
 				B5D8D3F024D26E2100236D6F /* Info.plist */,
 			);
 			path = PuddingLight;
+			sourceTree = "<group>";
+		};
+		B5D8D40424D2AEFE00236D6F /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				B5D8D3ED24D26E2100236D6F /* LaunchScreen.storyboard */,
+				B5D8D3E824D26E2000236D6F /* Main.storyboard */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		B5D8D40524D2AF1300236D6F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B5D8D41924D3C56900236D6F /* BaseViewController.swift */,
+				B524268924D5104800776B3F /* MainViewController.swift */,
+				B5D8D41724D3B84E00236D6F /* FloatViewController.swift */,
+				B524268B24D5199700776B3F /* SingleManger.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		B5D8D40624D2AF2300236D6F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B538325A24D9366100D2F24C /* Se */,
+				B538325124D8FA9500D2F24C /* Rgb */,
+				B524269224D5741100776B3F /* Cct */,
+				B524269124D56F7400776B3F /* Hsi */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		EE4320B92E38F981AD7AFCB4 /* Pods */ = {
@@ -88,7 +192,6 @@
 				459D8B82375D09659FBEC426 /* Pods-PuddingLight.debug.xcconfig */,
 				645386E328647348550F07EA /* Pods-PuddingLight.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -151,9 +254,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5D8D42624D3F13D00236D6F /* HsiTableViewCell.xib in Resources */,
+				B524269024D5200200776B3F /* HsiMenu.xib in Resources */,
 				B5D8D3EF24D26E2100236D6F /* LaunchScreen.storyboard in Resources */,
 				B5D8D3EC24D26E2100236D6F /* Assets.xcassets in Resources */,
+				B538325324D8FAC700D2F24C /* RgbMenu.xib in Resources */,
 				B5D8D3EA24D26E2000236D6F /* Main.storyboard in Resources */,
+				B538325024D80A8E00D2F24C /* CctMenu.xib in Resources */,
+				B5D8D43324D44DC600236D6F /* SeTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -189,9 +297,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B5D8D3E724D26E2000236D6F /* ViewController.swift in Sources */,
+				B524268A24D5104800776B3F /* MainViewController.swift in Sources */,
 				B5D8D3E324D26E2000236D6F /* AppDelegate.swift in Sources */,
+				B524268824D476C000776B3F /* DrawView.swift in Sources */,
+				B5D8D41824D3B84E00236D6F /* FloatViewController.swift in Sources */,
+				B538324E24D80A8500D2F24C /* CctMenu.swift in Sources */,
 				B5D8D3E524D26E2000236D6F /* SceneDelegate.swift in Sources */,
+				B538325524D8FAD100D2F24C /* RgbMenu.swift in Sources */,
+				B524268E24D51FF200776B3F /* HsiMenu.swift in Sources */,
+				B5D8D42524D3F13D00236D6F /* HsiTableViewCell.swift in Sources */,
+				B5D8D41A24D3C56900236D6F /* BaseViewController.swift in Sources */,
+				B5D8D42F24D44D2300236D6F /* SeDelegate.swift in Sources */,
+				B5D8D43224D44DC600236D6F /* SeTableViewCell.swift in Sources */,
+				B5D8D42024D3F0E800236D6F /* HsiDelegate.swift in Sources */,
+				B524268C24D5199700776B3F /* SingleManger.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -338,6 +457,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5GGZFW379P;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = PuddingLight/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -357,6 +477,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5GGZFW379P;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = PuddingLight/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

@@ -15,6 +15,7 @@
 			dependencies = (
 			);
 			name = SwiftLint;
+			productName = SwiftLint;
 		};
 		B9ED5194E665042005069EF06C82A050 /* OpenSSL-Universal */ = {
 			isa = PBXAggregateTarget;
@@ -24,6 +25,7 @@
 			dependencies = (
 			);
 			name = "OpenSSL-Universal";
+			productName = "OpenSSL-Universal";
 		};
 /* End PBXAggregateTarget section */
 
@@ -568,7 +570,7 @@
 		7529AD9C14125679F93C38E28D48930C /* LightHSLHueGet.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LightHSLHueGet.swift; path = "nRFMeshProvision/Classes/Mesh Messages/Lightning/LightHSLHueGet.swift"; sourceTree = "<group>"; };
 		760A0462E2112DDC09F26C2E970BF91E /* pqueue.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = pqueue.h; path = ios/include/openssl/pqueue.h; sourceTree = "<group>"; };
 		7615D35EFEE5541914A8DE5B2A613C3C /* AccessPdu.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AccessPdu.swift; path = "nRFMeshProvision/Classes/Layers/Access Layer/AccessPdu.swift"; sourceTree = "<group>"; };
-		763A52DD1E7FC3B334E49C94604A4AD7 /* libBabyBluetooth.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libBabyBluetooth.a; path = libBabyBluetooth.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		763A52DD1E7FC3B334E49C94604A4AD7 /* libBabyBluetooth.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libBabyBluetooth.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		76584A6DF047A0E6CC5CE8FDFE1051B1 /* StepResolution.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StepResolution.swift; path = "nRFMeshProvision/Classes/Mesh Model/StepResolution.swift"; sourceTree = "<group>"; };
 		769206ACF8E2DE999D93609361B83B88 /* Group.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Group.swift; path = "nRFMeshProvision/Classes/Mesh Model/Group.swift"; sourceTree = "<group>"; };
 		776B3D4EDE29506A1B5CC727621465B0 /* BabyToy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BabyToy.m; path = Classes/objc/BabyToy.m; sourceTree = "<group>"; };
@@ -633,14 +635,14 @@
 		9B9BFA2E733F4DC377054C5E2936E913 /* SceneDelete.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SceneDelete.swift; path = "nRFMeshProvision/Classes/Mesh Messages/Time and Scenes/SceneDelete.swift"; sourceTree = "<group>"; };
 		9C38E65D8A585BE3D287AD3007B6C61A /* ConfigDefaultTtlGet.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConfigDefaultTtlGet.swift; path = "nRFMeshProvision/Classes/Mesh Messages/Foundation/Configuration/ConfigDefaultTtlGet.swift"; sourceTree = "<group>"; };
 		9D3F78533CDE7A85119411DFB54D7C17 /* SegmentedMessage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SegmentedMessage.swift; path = "nRFMeshProvision/Classes/Layers/Lower Transport Layer/SegmentedMessage.swift"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9DA88918FC6475389B99C5B0FFB41448 /* GenericDefaultTransitionTimeSetUnacknowledged.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GenericDefaultTransitionTimeSetUnacknowledged.swift; path = "nRFMeshProvision/Classes/Mesh Messages/Generic/GenericDefaultTransitionTimeSetUnacknowledged.swift"; sourceTree = "<group>"; };
 		9E21058935B300BB89C741D5ECF9DDB2 /* nRFMeshProvision.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = nRFMeshProvision.release.xcconfig; sourceTree = "<group>"; };
 		9ED73FE19C4CB716DF839C90CE4076F0 /* hmac.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = hmac.h; path = ios/include/openssl/hmac.h; sourceTree = "<group>"; };
 		9FED76B8D3FB67CABB539FD01E468456 /* ConfigVendorModelSubscriptionList.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConfigVendorModelSubscriptionList.swift; path = "nRFMeshProvision/Classes/Mesh Messages/Foundation/Configuration/ConfigVendorModelSubscriptionList.swift"; sourceTree = "<group>"; };
 		A0BCD6B9211A1BC99011D015A9CF18B0 /* ApplicationKeys.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ApplicationKeys.swift; path = "nRFMeshProvision/Classes/Mesh API/ApplicationKeys.swift"; sourceTree = "<group>"; };
 		A0D0A8FC103DAAC42B0431159631E868 /* ConfigAppKeyList.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConfigAppKeyList.swift; path = "nRFMeshProvision/Classes/Mesh Messages/Foundation/Configuration/ConfigAppKeyList.swift"; sourceTree = "<group>"; };
-		A0DDEDB5B420D1D852DC9649CEDF4355 /* libPods-PuddingLight.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-PuddingLight.a"; path = "libPods-PuddingLight.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A0DDEDB5B420D1D852DC9649CEDF4355 /* libPods-PuddingLight.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PuddingLight.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0FBCAF124C8CFA92BA0E9F19980323D /* txt_db.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = txt_db.h; path = ios/include/openssl/txt_db.h; sourceTree = "<group>"; };
 		A13321C51C187CE8B421558D572ADE1D /* AccessError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AccessError.swift; path = "nRFMeshProvision/Classes/Layers/Access Layer/AccessError.swift"; sourceTree = "<group>"; };
 		A1F2D68B994AC5799E67E9D5D36EF785 /* Pods-PuddingLight-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-PuddingLight-acknowledgements.plist"; sourceTree = "<group>"; };
@@ -675,7 +677,7 @@
 		B3BDDD80D6BCA77EAC0128380494C231 /* srp.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = srp.h; path = ios/include/openssl/srp.h; sourceTree = "<group>"; };
 		B3E894B6A9D443242CD711EF7925D393 /* BabyBluetooth.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BabyBluetooth.h; path = Classes/objc/BabyBluetooth.h; sourceTree = "<group>"; };
 		B4A3E85327954B72E19A4381168B2572 /* ConfigFriendStatus.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConfigFriendStatus.swift; path = "nRFMeshProvision/Classes/Mesh Messages/Foundation/Configuration/ConfigFriendStatus.swift"; sourceTree = "<group>"; };
-		B4C001B7D2FB9649EC19C565872AF0D8 /* libnRFMeshProvision.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libnRFMeshProvision.a; path = libnRFMeshProvision.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		B4C001B7D2FB9649EC19C565872AF0D8 /* libnRFMeshProvision.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libnRFMeshProvision.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5909861AEE678E75350E80AD44C2F4F /* symhacks.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = symhacks.h; path = ios/include/openssl/symhacks.h; sourceTree = "<group>"; };
 		B64E861FFA71BC386ADDF3AC6FE12AFE /* x509_vfy.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = x509_vfy.h; path = ios/include/openssl/x509_vfy.h; sourceTree = "<group>"; };
 		B68BF50E135E75D04087E46EBFA25C93 /* dsa.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = dsa.h; path = ios/include/openssl/dsa.h; sourceTree = "<group>"; };
@@ -850,7 +852,6 @@
 				9BAC6A20A0984D5D3C2DC0DCB47F6C53 /* Static */,
 				CF5AB8F2A43DDBC06149F4FE325595C7 /* Support Files */,
 			);
-			name = "OpenSSL-Universal";
 			path = "OpenSSL-Universal";
 			sourceTree = "<group>";
 		};
@@ -912,7 +913,6 @@
 				776B3D4EDE29506A1B5CC727621465B0 /* BabyToy.m */,
 				6101181CD8BABBA329F6403C5444F2F2 /* Support Files */,
 			);
-			name = BabyBluetooth;
 			path = BabyBluetooth;
 			sourceTree = "<group>";
 		};
@@ -1335,7 +1335,6 @@
 				7A22EC2D5AD75DA429BDE66B673A46DE /* VendorMessage.swift */,
 				65B7D3E013207FFF6F6EFF05D4F76561 /* Support Files */,
 			);
-			name = nRFMeshProvision;
 			path = nRFMeshProvision;
 			sourceTree = "<group>";
 		};
@@ -1359,7 +1358,6 @@
 			children = (
 				FA0DA1A960001C20D87C2C089DF75B6A /* Support Files */,
 			);
-			name = SwiftLint;
 			path = SwiftLint;
 			sourceTree = "<group>";
 		};
@@ -1476,7 +1474,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1100;
-				LastUpgradeCheck = 1100;
+				LastUpgradeCheck = 1160;
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 9.3";
@@ -1892,7 +1890,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1973,7 +1971,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1992,7 +1990,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				GCC_PREFIX_HEADER = "Target Support Files/BabyBluetooth/BabyBluetooth-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PRIVATE_HEADERS_FOLDER_PATH = "";
@@ -2037,7 +2035,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -2081,7 +2079,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				GCC_PREFIX_HEADER = "Target Support Files/BabyBluetooth/BabyBluetooth-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PRIVATE_HEADERS_FOLDER_PATH = "";
@@ -2216,7 +2214,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
