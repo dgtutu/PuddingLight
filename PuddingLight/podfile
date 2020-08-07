@@ -3,5 +3,6 @@ target 'PuddingLight' do
 pod 'BabyBluetooth','~> 0.7.0'
 pod 'SwiftLint'
 pod 'nRFMeshProvision'
+# pod 'SideMenu', '~> 6.0'
 end
 

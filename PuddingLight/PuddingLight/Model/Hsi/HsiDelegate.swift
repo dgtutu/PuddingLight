@@ -17,6 +17,7 @@ class HsiDelegate: NSObject ,UITableViewDelegate ,UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        //print("once")
         return 9
     }
     
@@ -30,22 +31,22 @@ class HsiDelegate: NSObject ,UITableViewDelegate ,UITableViewDataSource {
             }else{
                 switch indexPath.row {
                 case 1:
-                    cell .setUpWithColor(0,100,100, 1)
+                    cell .setUpWithColor(0,100)
                     
                 case 2:
-                    cell.setUpWithColor(60,100,100,1)
+                    cell.setUpWithColor(60,100)
                    
                 case 3:
-                    cell.setUpWithColor(120,100,100,1)
+                    cell.setUpWithColor(120,100)
                    
                 case 4:
-                    cell.setUpWithColor(180,100,100,1)
+                    cell.setUpWithColor(180,100)
                     
                 case 5:
-                    cell.setUpWithColor(240,100,100,1)
+                    cell.setUpWithColor(240,100)
                     
                 case 6:
-                   cell.setUpWithColor(300,100,100,1)
+                   cell.setUpWithColor(300,100)
                     
                     
                 default:

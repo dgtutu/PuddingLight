@@ -12,20 +12,21 @@ protocol MainViewControllerDelegate {
     func sendCurrentPage(Page: Int)
     func showShowBtn()
     func changePage()
+    //  func hideSideView()
 }
 
 
 class MainViewController: BaseViewController {
     
-//    
-//    func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldReceive touch: UITouch) -> Bool {
-//        print(touch)
-//        if (touch.view?.isKind(of: UISlider.self)) == true  {
-//            print("姬霓太美")
-//            return false
-//        }
-//        return true
-//    }
+    //
+    //    func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldReceive touch: UITouch) -> Bool {
+    //        print(touch)
+    //        if (touch.view?.isKind(of: UISlider.self)) == true  {
+    //            print("姬霓太美")
+    //            return false
+    //        }
+    //        return true
+    //    }
     
     //MARK: -代理
     var delegate:MainViewControllerDelegate?
@@ -34,6 +35,10 @@ class MainViewController: BaseViewController {
     var seDelegate: SeDelegate = SeDelegate()
     
     //MARK: -CCT
+    static var globalBrightnessValue:Int = 100
+    static var colorTemperatureValue:Int = 6500
+    static var colorCompensation:Int = 10
+    @IBOutlet weak var colorCompensationSlider: UISlider!
     @IBOutlet weak var colorTemperatureValueLabel: UILabel!
     @IBOutlet weak var cctBrightnessValueLabel: UILabel!
     @IBOutlet weak var colorTemperatureSlider: UISlider!
@@ -97,21 +102,31 @@ class MainViewController: BaseViewController {
         
     }
     
+    @IBAction func changColorCompensationSlider(_ sender: Any) {
+        MainViewController.colorCompensation = Int(colorCompensationSlider.value * 20)
+        bleTool.setCCTMode(WithColorTemperature: MainViewController.colorTemperatureValue, AndCompensate: MainViewController.colorCompensation)
+        print("色调补偿值:\(MainViewController.colorCompensation)")
+    }
+    
     @IBAction func changeColorTemperatureSlider(_ sender: Any) {
-        let colorTemperatureValue = colorTemperatureSlider.value * 7200 + 2800
-        self.colorTemperatureValueLabel.text = String(format: "%.0f", arguments: [colorTemperatureValue])
+        MainViewController.colorTemperatureValue = Int(colorTemperatureSlider.value * 7200 + 2799)
+        print("色温值:\(MainViewController.colorTemperatureValue)")
+        self.colorTemperatureValueLabel.text = "\(MainViewController.colorTemperatureValue)"
+        bleTool.setCCTMode(WithColorTemperature: MainViewController.colorTemperatureValue, AndCompensate: MainViewController.colorCompensation)
     }
     
     @IBAction func changeCctBrightnessSlider(_ sender: Any) {
-        let cctBrightnessValue = cctBrightnessSlider.value * 100
-        self.cctBrightnessValueLabel.text = String(format: "%.0f", arguments: [cctBrightnessValue])
+        
+        MainViewController.globalBrightnessValue = Int(cctBrightnessSlider.value * 100)
+        self.cctBrightnessValueLabel.text = "\(MainViewController.globalBrightnessValue)"
+        bleTool.setBrightness(WithBrightness: MainViewController.globalBrightnessValue)
     }
     
 }
 
 
 extension MainViewController :UIScrollViewDelegate {
-  func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         let pageWidth:CGFloat = myScrollView.frame.size.width
         currentPage = Int(floor((myScrollView.contentOffset.x - pageWidth / 2) / pageWidth ) + 1) + 1
         delegate?.sendCurrentPage(Page: currentPage)
@@ -127,16 +142,14 @@ extension MainViewController{
         initHsiTableView()
         initMyScorllView()
         initSeTableView()
-
+        
     }
     
     func initCctView() {
         cctView.backgroundColor = .orange
-        colorTemperatureValueLabel.text = "2800"
-        cctBrightnessValueLabel.text = "100"
         cctSliderView.isHidden = true
-        colorTemperatureValueLabel.text = "6500"
-        cctBrightnessValueLabel.text = "50"
+        colorTemperatureValueLabel.text = "\(MainViewController.colorTemperatureValue)"
+        cctBrightnessValueLabel.text = "\(MainViewController.globalBrightnessValue)"
     }
     
     func initRgbView() {
@@ -149,7 +162,7 @@ extension MainViewController{
     }
     
     func initHsiTableView() {
-        //hsiTableView.register(UINib.init(nibName: "HsiTableViewCell", bundle: nil), forCellReuseIdentifier: "cell")
+       
         hsiTableView.delegate = hsiDelegate
         hsiTableView.dataSource = hsiDelegate
         hsiTableView.isPagingEnabled = true
@@ -160,7 +173,6 @@ extension MainViewController{
     }
     
     func initSeTableView(){
-      //  seTableView.register(UINib.init(nibName: "SeTableViewCell", bundle: nil), forCellReuseIdentifier: "SeCell")
         seTableView.delegate = seDelegate
         seTableView.dataSource = seDelegate
         seTableView.isPagingEnabled = true

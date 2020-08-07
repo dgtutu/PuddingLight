@@ -8,9 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		5E3EA2FCA08332C0237E3C68 /* libPods-PuddingLight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DDAB7AA4E7AC8509E7FE5BC /* libPods-PuddingLight.a */; };
+		B506C82124DA9870002F07FF /* ConnectingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B506C82024DA9870002F07FF /* ConnectingViewController.swift */; };
+		B506C82324DAAA44002F07FF /* BlueToothTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = B506C82224DAAA44002F07FF /* BlueToothTool.swift */; };
+		B506C82F24DB99A5002F07FF /* DeviceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B506C82E24DB99A5002F07FF /* DeviceCell.swift */; };
+		B506C83424DBA674002F07FF /* DataTool.m in Sources */ = {isa = PBXBuildFile; fileRef = B506C83224DBA673002F07FF /* DataTool.m */; };
 		B524268824D476C000776B3F /* DrawView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B524268724D476C000776B3F /* DrawView.swift */; };
 		B524268A24D5104800776B3F /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B524268924D5104800776B3F /* MainViewController.swift */; };
-		B524268C24D5199700776B3F /* SingleManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = B524268B24D5199700776B3F /* SingleManger.swift */; };
 		B524268E24D51FF200776B3F /* HsiMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = B524268D24D51FF200776B3F /* HsiMenu.swift */; };
 		B524269024D5200200776B3F /* HsiMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = B524268F24D5200200776B3F /* HsiMenu.xib */; };
 		B538324E24D80A8500D2F24C /* CctMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = B538324D24D80A8500D2F24C /* CctMenu.swift */; };
@@ -36,9 +39,14 @@
 		459D8B82375D09659FBEC426 /* Pods-PuddingLight.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PuddingLight.debug.xcconfig"; path = "Target Support Files/Pods-PuddingLight/Pods-PuddingLight.debug.xcconfig"; sourceTree = "<group>"; };
 		645386E328647348550F07EA /* Pods-PuddingLight.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PuddingLight.release.xcconfig"; path = "Target Support Files/Pods-PuddingLight/Pods-PuddingLight.release.xcconfig"; sourceTree = "<group>"; };
 		7DDAB7AA4E7AC8509E7FE5BC /* libPods-PuddingLight.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PuddingLight.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B506C82024DA9870002F07FF /* ConnectingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectingViewController.swift; sourceTree = "<group>"; };
+		B506C82224DAAA44002F07FF /* BlueToothTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueToothTool.swift; sourceTree = "<group>"; };
+		B506C82E24DB99A5002F07FF /* DeviceCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DeviceCell.swift; path = ../../../../../Desktop/DeviceCell.swift; sourceTree = "<group>"; };
+		B506C83124DBA672002F07FF /* PuddingLight-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PuddingLight-Bridging-Header.h"; sourceTree = "<group>"; };
+		B506C83224DBA673002F07FF /* DataTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataTool.m; sourceTree = "<group>"; };
+		B506C83324DBA674002F07FF /* DataTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataTool.h; sourceTree = "<group>"; };
 		B524268724D476C000776B3F /* DrawView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawView.swift; sourceTree = "<group>"; };
 		B524268924D5104800776B3F /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
-		B524268B24D5199700776B3F /* SingleManger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleManger.swift; sourceTree = "<group>"; };
 		B524268D24D51FF200776B3F /* HsiMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HsiMenu.swift; sourceTree = "<group>"; };
 		B524268F24D5200200776B3F /* HsiMenu.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HsiMenu.xib; sourceTree = "<group>"; };
 		B538324D24D80A8500D2F24C /* CctMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CctMenu.swift; sourceTree = "<group>"; };
@@ -80,6 +88,16 @@
 				7DDAB7AA4E7AC8509E7FE5BC /* libPods-PuddingLight.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B506C83024DBA664002F07FF /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				B506C83324DBA674002F07FF /* DataTool.h */,
+				B506C83224DBA673002F07FF /* DataTool.m */,
+				B506C83124DBA672002F07FF /* PuddingLight-Bridging-Header.h */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		B524269124D56F7400776B3F /* Hsi */ = {
@@ -146,6 +164,7 @@
 			children = (
 				B5D8D3E224D26E2000236D6F /* AppDelegate.swift */,
 				B5D8D3E424D26E2000236D6F /* SceneDelegate.swift */,
+				B506C83024DBA664002F07FF /* Utils */,
 				B5D8D40424D2AEFE00236D6F /* UI */,
 				B5D8D40624D2AF2300236D6F /* Model */,
 				B5D8D40524D2AF1300236D6F /* Controller */,
@@ -170,7 +189,9 @@
 				B5D8D41924D3C56900236D6F /* BaseViewController.swift */,
 				B524268924D5104800776B3F /* MainViewController.swift */,
 				B5D8D41724D3B84E00236D6F /* FloatViewController.swift */,
-				B524268B24D5199700776B3F /* SingleManger.swift */,
+				B506C82224DAAA44002F07FF /* BlueToothTool.swift */,
+				B506C82E24DB99A5002F07FF /* DeviceCell.swift */,
+				B506C82024DA9870002F07FF /* ConnectingViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -228,6 +249,7 @@
 				TargetAttributes = {
 					B5D8D3DE24D26E2000236D6F = {
 						CreatedOnToolsVersion = 11.6;
+						LastSwiftMigration = 1160;
 					};
 				};
 			};
@@ -299,18 +321,21 @@
 			files = (
 				B524268A24D5104800776B3F /* MainViewController.swift in Sources */,
 				B5D8D3E324D26E2000236D6F /* AppDelegate.swift in Sources */,
+				B506C82324DAAA44002F07FF /* BlueToothTool.swift in Sources */,
 				B524268824D476C000776B3F /* DrawView.swift in Sources */,
 				B5D8D41824D3B84E00236D6F /* FloatViewController.swift in Sources */,
+				B506C83424DBA674002F07FF /* DataTool.m in Sources */,
 				B538324E24D80A8500D2F24C /* CctMenu.swift in Sources */,
 				B5D8D3E524D26E2000236D6F /* SceneDelegate.swift in Sources */,
 				B538325524D8FAD100D2F24C /* RgbMenu.swift in Sources */,
+				B506C82F24DB99A5002F07FF /* DeviceCell.swift in Sources */,
 				B524268E24D51FF200776B3F /* HsiMenu.swift in Sources */,
 				B5D8D42524D3F13D00236D6F /* HsiTableViewCell.swift in Sources */,
 				B5D8D41A24D3C56900236D6F /* BaseViewController.swift in Sources */,
 				B5D8D42F24D44D2300236D6F /* SeDelegate.swift in Sources */,
 				B5D8D43224D44DC600236D6F /* SeTableViewCell.swift in Sources */,
 				B5D8D42024D3F0E800236D6F /* HsiDelegate.swift in Sources */,
-				B524268C24D5199700776B3F /* SingleManger.swift in Sources */,
+				B506C82124DA9870002F07FF /* ConnectingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -455,6 +480,7 @@
 			baseConfigurationReference = 459D8B82375D09659FBEC426 /* Pods-PuddingLight.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5GGZFW379P;
 				ENABLE_BITCODE = NO;
@@ -465,6 +491,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ben.PuddingLight;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "PuddingLight/Utils/PuddingLight-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -475,6 +503,7 @@
 			baseConfigurationReference = 645386E328647348550F07EA /* Pods-PuddingLight.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5GGZFW379P;
 				ENABLE_BITCODE = NO;
@@ -485,6 +514,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ben.PuddingLight;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "PuddingLight/Utils/PuddingLight-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

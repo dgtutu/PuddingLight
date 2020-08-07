@@ -22,33 +22,39 @@ class HsiMenu: UIView ,HsiTableViewCellDelegate {
     func setSliderValue() {
         let vc = getControllerfromview(view: self) as! MainViewController
         let cell = vc.hsiTableView.visibleCells.first as! HsiTableViewCell
-        hueSlider.value = Float(cell.hueValue)/360.0
-        saturationSlider.value = Float(cell.saturationValue)/100.0
-        brightnessSlider.value = Float(cell.brightnessValue)/100.0
+        hueSlider.value = Float(HsiTableViewCell.hueValue)/360.0
+        saturationSlider.value = Float(HsiTableViewCell.saturationValue)/100.0
+        brightnessSlider.value = Float(MainViewController.globalBrightnessValue)/100.0
     }
     
-    func setUpCell() {
+    func setUpCellHueAndSaturation() {
         let vc = getControllerfromview(view: self) as! MainViewController
         let cell = vc.hsiTableView.visibleCells.first as! HsiTableViewCell
         
         if cell.pointFlag == true{
-            cell.setUpPointWithColor(Int(hueSlider.value * 360), Int(saturationSlider.value * 100), Int(brightnessSlider.value * 100), 1)
+            cell.setUpPointWithColor(Int(hueSlider.value * 360), Int(saturationSlider.value * 100))
         }
         if cell.pointFlag == false{
-            cell.setUpWithColor(Int(hueSlider.value * 360), Int(saturationSlider.value * 100), Int(brightnessSlider.value * 100), 1)
+            cell.setUpWithColor(Int(hueSlider.value * 360), Int(saturationSlider.value * 100))
         }
+    }
+    
+    func setUpCellBrightness() {
+        let vc = getControllerfromview(view: self) as! MainViewController
+        let cell = vc.hsiTableView.visibleCells.first as! HsiTableViewCell
+        cell.setBrightess(brightness: Int(brightnessSlider.value * 100))
     }
     
     @IBAction func changeHueSlider(_ sender: Any) {
-        setUpCell()
+        setUpCellHueAndSaturation()
     }
     
     @IBAction func changeSaturationSlider(_ sender: Any) {
-        setUpCell()
+        setUpCellHueAndSaturation()
     }
     
     @IBAction func changeBrightnessSlider(_ sender: Any) {
-        setUpCell()
+        setUpCellBrightness()
     }
     
     
@@ -100,9 +106,9 @@ class HsiMenu: UIView ,HsiTableViewCellDelegate {
         let vc = getControllerfromview(view: self) as! MainViewController
         let cell = vc.hsiTableView.visibleCells.first as! HsiTableViewCell
         cell.delegate = self
-        hueSlider.value = Float(cell.hueValue)/360.0
-        saturationSlider.value = Float(cell.saturationValue)/100.0
-        brightnessSlider.value = Float(cell.brightnessValue)/100.0
+        hueSlider.value = Float(HsiTableViewCell.hueValue)/360.0
+        saturationSlider.value = Float(HsiTableViewCell.saturationValue)/100.0
+        brightnessSlider.value = Float(MainViewController.globalBrightnessValue)/100.0
     }
     
     required init?(coder: NSCoder) {

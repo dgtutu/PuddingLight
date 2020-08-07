@@ -10,14 +10,18 @@ import UIKit
 
 
 class FloatViewController: BaseViewController,MainViewControllerDelegate {
+
+    
     
     var rgbMenu:RgbMenu?
     var hsiMenu:HsiMenu?
     var cctMenu:CctMenu?
     var mainVc:MainViewController?
     
+    @IBOutlet weak var closeSideViewBtn: UIButton!
+    @IBOutlet weak var sideView: UIView!
     @IBOutlet weak var pageController: UIPageControl!
-    @IBOutlet weak var menuBtn: UIButton!
+    @IBOutlet weak var menuViewBtn: UIButton!
     @IBOutlet weak var showBtn: UIButton!
     @IBOutlet weak var mainController: UIView!
     @IBOutlet weak var lockBtn: UIButton!
@@ -28,8 +32,15 @@ class FloatViewController: BaseViewController,MainViewControllerDelegate {
             //获得子控制器
         }
     }
-    @IBAction func clickMenuBtn(_ sender: Any) {
-       // performSegue(withIdentifier: "menu", sender: nil)
+    @IBAction func clickMenuViewBtn(_ sender: Any) {
+        sideView.isHidden = false
+        closeSideViewBtn.isHidden = false
+        
+    }
+    
+    @IBAction func clickCloseSideViewBtn(_ sender: Any) {
+        sideView.isHidden = true
+        closeSideViewBtn.isHidden = true
     }
     
     func changePage() {
@@ -37,6 +48,7 @@ class FloatViewController: BaseViewController,MainViewControllerDelegate {
         pageController.currentPage = currentPage-1
         switch currentPage {
         case 1:
+            bleTool.setHsiMode(WithHue: HsiTableViewCell.hueValue, andSaturation: HsiTableViewCell.saturationValue)
             if hsiMenu?.isDescendant(of: (mainVc?.hsiTableView)!) == true {
                 //hsiMenu?.removeFromSuperview()
 //                print("hsiyes")
@@ -46,6 +58,12 @@ class FloatViewController: BaseViewController,MainViewControllerDelegate {
                 //print("hsino")
             }
         case 2:
+            
+            bleTool.setCCTMode(WithColorTemperature: MainViewController.colorTemperatureValue, AndCompensate: MainViewController.colorCompensation)
+            mainVc?.cctBrightnessSlider.value = Float(MainViewController.globalBrightnessValue) / 100.0
+            mainVc?.cctBrightnessValueLabel.text = "\(MainViewController.globalBrightnessValue)"
+            
+            
             if  cctMenu?.isDescendant(of: (mainVc?.cctView)!) == true{
                 //            cctMenu?.removeFromSuperview()
                 //            mainVc?.cctSliderView.isHidden = true
@@ -81,8 +99,9 @@ class FloatViewController: BaseViewController,MainViewControllerDelegate {
     }
     
     @IBAction func clickShowBtn(_ sender: Any) {
+    
         showBtn.isHidden = true
-        //print("currentPage:\(currentPage)")
+        print(bleTool.discoveredPeripherals)
         switch currentPage {
         case 1:
             
@@ -162,7 +181,7 @@ class FloatViewController: BaseViewController,MainViewControllerDelegate {
             
         default:
             
-            print("me")
+            print("")
         }
     }
     
@@ -191,5 +210,10 @@ class FloatViewController: BaseViewController,MainViewControllerDelegate {
         super.viewDidLoad()
         pageController.numberOfPages = 4
         pageController.currentPage = 0
+        sideView.isHidden = true
+        closeSideViewBtn.isHidden = true
+        
     }
+    
+    
 }
