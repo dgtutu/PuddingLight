@@ -35,6 +35,9 @@
                     <state key="normal" title="分享">
                         <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </state>
+                    <connections>
+                        <action selector="clickShareBtn:" destination="iN0-l3-epB" eventType="touchUpInside" id="9Tr-6q-cFv"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qmO-Kf-TPZ">
                     <rect key="frame" x="23" y="267" width="46" height="30"/>
@@ -44,6 +47,9 @@
                     <state key="normal" title="扫一扫">
                         <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </state>
+                    <connections>
+                        <action selector="clickScanBtn:" destination="iN0-l3-epB" eventType="touchUpInside" id="Pcf-51-bsO"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ldy-wh-ORA">
                     <rect key="frame" x="28" y="126" width="36" height="36"/>

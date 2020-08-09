@@ -1,30 +1,30 @@
 PODS:
-  - BabyBluetooth (0.7.0)
   - nRFMeshProvision (2.2.3):
     - OpenSSL-Universal (= 1.0.2.19)
   - OpenSSL-Universal (1.0.2.19):
     - OpenSSL-Universal/Static (= 1.0.2.19)
   - OpenSSL-Universal/Static (1.0.2.19)
   - SwiftLint (0.39.2)
+  - swiftScan (1.1.5)
 
 DEPENDENCIES:
-  - BabyBluetooth (~> 0.7.0)
   - nRFMeshProvision
   - SwiftLint
+  - swiftScan
 
 SPEC REPOS:
   trunk:
-    - BabyBluetooth
     - nRFMeshProvision
     - OpenSSL-Universal
     - SwiftLint
+    - swiftScan
 
 SPEC CHECKSUMS:
-  BabyBluetooth: d50758aecf24d4a0ab9271d69f0f116d6bee51c9
   nRFMeshProvision: ecb20ce595bb421f2350e539f05d7391dd507724
   OpenSSL-Universal: 8b48cc0d10c1b2923617dfe5c178aa9ed2689355
   SwiftLint: 22ccbbe3b8008684be5955693bab135e0ed6a447
+  swiftScan: bc6dbf74e6a579c45a861691afc44628d8d9f6ab
 
-PODFILE CHECKSUM: 156c5eaae5193952e0b8659a2cbc417b63d5c47c
+PODFILE CHECKSUM: 108e7a6b8ea69db6fbfc297f01576e27b74a8af6
 
 COCOAPODS: 1.9.3

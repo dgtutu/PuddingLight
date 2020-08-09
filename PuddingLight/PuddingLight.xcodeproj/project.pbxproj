@@ -18,8 +18,14 @@
 		B524269024D5200200776B3F /* HsiMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = B524268F24D5200200776B3F /* HsiMenu.xib */; };
 		B538324E24D80A8500D2F24C /* CctMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = B538324D24D80A8500D2F24C /* CctMenu.swift */; };
 		B538325024D80A8E00D2F24C /* CctMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = B538324F24D80A8E00D2F24C /* CctMenu.xib */; };
-		B538325324D8FAC700D2F24C /* RgbMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = B538325224D8FAC700D2F24C /* RgbMenu.xib */; };
-		B538325524D8FAD100D2F24C /* RgbMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = B538325424D8FAD100D2F24C /* RgbMenu.swift */; };
+		B58FBBD224DD2C1800970C48 /* SeMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = B58FBBD124DD2C1800970C48 /* SeMenu.swift */; };
+		B58FBBD424DD2C2400970C48 /* SeMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = B58FBBD324DD2C2400970C48 /* SeMenu.xib */; };
+		B58FBBD924DD3F8100970C48 /* Colorimeter.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B58FBBD824DD3F8100970C48 /* Colorimeter.storyboard */; };
+		B58FBBDB24DD40C300970C48 /* ColorimeterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B58FBBDA24DD40C300970C48 /* ColorimeterViewController.swift */; };
+		B58FBBF024DE906400970C48 /* QrCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B58FBBEF24DE906400970C48 /* QrCodeView.swift */; };
+		B58FBBF224DE906D00970C48 /* QrCodeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B58FBBF124DE906D00970C48 /* QrCodeView.xib */; };
+		B58FBBF924DEA83300970C48 /* QrScan.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B58FBBF824DEA83300970C48 /* QrScan.storyboard */; };
+		B58FBBFB24DEA90200970C48 /* QrScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B58FBBFA24DEA90200970C48 /* QrScanViewController.swift */; };
 		B5D8D3E324D26E2000236D6F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D8D3E224D26E2000236D6F /* AppDelegate.swift */; };
 		B5D8D3E524D26E2000236D6F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D8D3E424D26E2000236D6F /* SceneDelegate.swift */; };
 		B5D8D3EA24D26E2000236D6F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5D8D3E824D26E2000236D6F /* Main.storyboard */; };
@@ -51,8 +57,14 @@
 		B524268F24D5200200776B3F /* HsiMenu.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HsiMenu.xib; sourceTree = "<group>"; };
 		B538324D24D80A8500D2F24C /* CctMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CctMenu.swift; sourceTree = "<group>"; };
 		B538324F24D80A8E00D2F24C /* CctMenu.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CctMenu.xib; sourceTree = "<group>"; };
-		B538325224D8FAC700D2F24C /* RgbMenu.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RgbMenu.xib; sourceTree = "<group>"; };
-		B538325424D8FAD100D2F24C /* RgbMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RgbMenu.swift; sourceTree = "<group>"; };
+		B58FBBD124DD2C1800970C48 /* SeMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeMenu.swift; sourceTree = "<group>"; };
+		B58FBBD324DD2C2400970C48 /* SeMenu.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SeMenu.xib; sourceTree = "<group>"; };
+		B58FBBD824DD3F8100970C48 /* Colorimeter.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Colorimeter.storyboard; sourceTree = "<group>"; };
+		B58FBBDA24DD40C300970C48 /* ColorimeterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorimeterViewController.swift; sourceTree = "<group>"; };
+		B58FBBEF24DE906400970C48 /* QrCodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QrCodeView.swift; sourceTree = "<group>"; };
+		B58FBBF124DE906D00970C48 /* QrCodeView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QrCodeView.xib; sourceTree = "<group>"; };
+		B58FBBF824DEA83300970C48 /* QrScan.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = QrScan.storyboard; sourceTree = "<group>"; };
+		B58FBBFA24DEA90200970C48 /* QrScanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QrScanViewController.swift; sourceTree = "<group>"; };
 		B5D8D3DF24D26E2000236D6F /* PuddingLight.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PuddingLight.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5D8D3E224D26E2000236D6F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B5D8D3E424D26E2000236D6F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -122,23 +134,25 @@
 			path = Cct;
 			sourceTree = "<group>";
 		};
-		B538325124D8FA9500D2F24C /* Rgb */ = {
-			isa = PBXGroup;
-			children = (
-				B538325224D8FAC700D2F24C /* RgbMenu.xib */,
-				B538325424D8FAD100D2F24C /* RgbMenu.swift */,
-			);
-			path = Rgb;
-			sourceTree = "<group>";
-		};
 		B538325A24D9366100D2F24C /* Se */ = {
 			isa = PBXGroup;
 			children = (
 				B5D8D42E24D44D2300236D6F /* SeDelegate.swift */,
 				B5D8D43024D44DC600236D6F /* SeTableViewCell.swift */,
 				B5D8D43124D44DC600236D6F /* SeTableViewCell.xib */,
+				B58FBBD124DD2C1800970C48 /* SeMenu.swift */,
+				B58FBBD324DD2C2400970C48 /* SeMenu.xib */,
 			);
 			path = Se;
+			sourceTree = "<group>";
+		};
+		B58FBBEE24DE8C1700970C48 /* QRcode */ = {
+			isa = PBXGroup;
+			children = (
+				B58FBBEF24DE906400970C48 /* QrCodeView.swift */,
+				B58FBBF124DE906D00970C48 /* QrCodeView.xib */,
+			);
+			path = QRcode;
 			sourceTree = "<group>";
 		};
 		B5D8D3D624D26E2000236D6F = {
@@ -166,7 +180,6 @@
 				B5D8D3E424D26E2000236D6F /* SceneDelegate.swift */,
 				B506C83024DBA664002F07FF /* Utils */,
 				B5D8D40424D2AEFE00236D6F /* UI */,
-				B5D8D40624D2AF2300236D6F /* Model */,
 				B5D8D40524D2AF1300236D6F /* Controller */,
 				B5D8D3EB24D26E2100236D6F /* Assets.xcassets */,
 				B5D8D3F024D26E2100236D6F /* Info.plist */,
@@ -177,8 +190,11 @@
 		B5D8D40424D2AEFE00236D6F /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				B5D8D40624D2AF2300236D6F /* Model */,
 				B5D8D3ED24D26E2100236D6F /* LaunchScreen.storyboard */,
+				B58FBBF824DEA83300970C48 /* QrScan.storyboard */,
 				B5D8D3E824D26E2000236D6F /* Main.storyboard */,
+				B58FBBD824DD3F8100970C48 /* Colorimeter.storyboard */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -192,6 +208,8 @@
 				B506C82224DAAA44002F07FF /* BlueToothTool.swift */,
 				B506C82E24DB99A5002F07FF /* DeviceCell.swift */,
 				B506C82024DA9870002F07FF /* ConnectingViewController.swift */,
+				B58FBBDA24DD40C300970C48 /* ColorimeterViewController.swift */,
+				B58FBBFA24DEA90200970C48 /* QrScanViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -199,8 +217,8 @@
 		B5D8D40624D2AF2300236D6F /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				B58FBBEE24DE8C1700970C48 /* QRcode */,
 				B538325A24D9366100D2F24C /* Se */,
-				B538325124D8FA9500D2F24C /* Rgb */,
 				B524269224D5741100776B3F /* Cct */,
 				B524269124D56F7400776B3F /* Hsi */,
 			);
@@ -276,13 +294,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B58FBBD924DD3F8100970C48 /* Colorimeter.storyboard in Resources */,
+				B58FBBD424DD2C2400970C48 /* SeMenu.xib in Resources */,
 				B5D8D42624D3F13D00236D6F /* HsiTableViewCell.xib in Resources */,
 				B524269024D5200200776B3F /* HsiMenu.xib in Resources */,
 				B5D8D3EF24D26E2100236D6F /* LaunchScreen.storyboard in Resources */,
 				B5D8D3EC24D26E2100236D6F /* Assets.xcassets in Resources */,
-				B538325324D8FAC700D2F24C /* RgbMenu.xib in Resources */,
 				B5D8D3EA24D26E2000236D6F /* Main.storyboard in Resources */,
 				B538325024D80A8E00D2F24C /* CctMenu.xib in Resources */,
+				B58FBBF924DEA83300970C48 /* QrScan.storyboard in Resources */,
+				B58FBBF224DE906D00970C48 /* QrCodeView.xib in Resources */,
 				B5D8D43324D44DC600236D6F /* SeTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -321,19 +342,22 @@
 			files = (
 				B524268A24D5104800776B3F /* MainViewController.swift in Sources */,
 				B5D8D3E324D26E2000236D6F /* AppDelegate.swift in Sources */,
+				B58FBBDB24DD40C300970C48 /* ColorimeterViewController.swift in Sources */,
 				B506C82324DAAA44002F07FF /* BlueToothTool.swift in Sources */,
 				B524268824D476C000776B3F /* DrawView.swift in Sources */,
 				B5D8D41824D3B84E00236D6F /* FloatViewController.swift in Sources */,
 				B506C83424DBA674002F07FF /* DataTool.m in Sources */,
 				B538324E24D80A8500D2F24C /* CctMenu.swift in Sources */,
 				B5D8D3E524D26E2000236D6F /* SceneDelegate.swift in Sources */,
-				B538325524D8FAD100D2F24C /* RgbMenu.swift in Sources */,
 				B506C82F24DB99A5002F07FF /* DeviceCell.swift in Sources */,
 				B524268E24D51FF200776B3F /* HsiMenu.swift in Sources */,
 				B5D8D42524D3F13D00236D6F /* HsiTableViewCell.swift in Sources */,
 				B5D8D41A24D3C56900236D6F /* BaseViewController.swift in Sources */,
 				B5D8D42F24D44D2300236D6F /* SeDelegate.swift in Sources */,
 				B5D8D43224D44DC600236D6F /* SeTableViewCell.swift in Sources */,
+				B58FBBD224DD2C1800970C48 /* SeMenu.swift in Sources */,
+				B58FBBFB24DEA90200970C48 /* QrScanViewController.swift in Sources */,
+				B58FBBF024DE906400970C48 /* QrCodeView.swift in Sources */,
 				B5D8D42024D3F0E800236D6F /* HsiDelegate.swift in Sources */,
 				B506C82124DA9870002F07FF /* ConnectingViewController.swift in Sources */,
 			);

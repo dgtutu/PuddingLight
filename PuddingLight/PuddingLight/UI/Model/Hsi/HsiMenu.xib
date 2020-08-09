@@ -10,11 +10,11 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="HsiMenu" customModule="PuddingLight" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="838" height="701"/>
+            <rect key="frame" x="0.0" y="0.0" width="838" height="336"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WYZ-Yi-3TY">
-                    <rect key="frame" x="787" y="506" width="31" height="30"/>
+                    <rect key="frame" x="787" y="141" width="31" height="30"/>
                     <state key="normal" title="参数">
                         <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </state>
@@ -23,82 +23,94 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZA7-sb-0UZ">
-                    <rect key="frame" x="787" y="551" width="31" height="30"/>
+                    <rect key="frame" x="787" y="186" width="31" height="30"/>
                     <state key="normal" title="分享">
                         <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </state>
+                    <connections>
+                        <action selector="clickShareBtn:" destination="iN0-l3-epB" eventType="touchUpInside" id="Rbh-kK-eBT"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ON1-xa-XQ0">
-                    <rect key="frame" x="779.5" y="596" width="46" height="30"/>
+                    <rect key="frame" x="779.5" y="231" width="46" height="30"/>
                     <state key="normal" title="扫一扫">
                         <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </state>
+                    <connections>
+                        <action selector="clickScanBtn:" destination="iN0-l3-epB" eventType="touchUpInside" id="gqV-ZB-m0U"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2rh-3K-c6j">
-                    <rect key="frame" x="787" y="641" width="31" height="30"/>
+                    <rect key="frame" x="787" y="276" width="31" height="30"/>
                     <state key="normal" title="预设">
                         <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </state>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tgO-nk-Urm">
-                    <rect key="frame" x="784.5" y="455" width="36" height="36"/>
+                    <rect key="frame" x="784.5" y="90" width="36" height="36"/>
                     <state key="normal" image="down"/>
                     <connections>
                         <action selector="clickHideBtn:" destination="iN0-l3-epB" eventType="touchUpInside" id="212-ab-wCt"/>
                     </connections>
                 </button>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LOT-xg-a37">
-                    <rect key="frame" x="5" y="446" width="769.5" height="240"/>
+                    <rect key="frame" x="5" y="81" width="769.5" height="240"/>
                     <subviews>
                         <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="WMl-VN-e2L">
-                            <rect key="frame" x="38" y="85" width="728.5" height="26"/>
+                            <rect key="frame" x="38" y="85" width="718.5" height="26"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="25" id="Ho1-48-bmQ"/>
                             </constraints>
+                            <color key="minimumTrackTintColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="maximumTrackTintColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <action selector="changeHueSlider:" destination="iN0-l3-epB" eventType="valueChanged" id="KqJ-8J-Jit"/>
                             </connections>
                         </slider>
                         <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="H2Y-1y-xLP">
-                            <rect key="frame" x="38" y="145" width="728.5" height="26"/>
+                            <rect key="frame" x="38" y="145" width="718.5" height="26"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="25" id="xDs-x1-A9r"/>
                             </constraints>
+                            <color key="minimumTrackTintColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="maximumTrackTintColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <action selector="changeSaturationSlider:" destination="iN0-l3-epB" eventType="valueChanged" id="vU5-2W-B3B"/>
                             </connections>
                         </slider>
                         <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="mOY-ZA-RQK">
-                            <rect key="frame" x="38" y="205" width="728.5" height="26"/>
+                            <rect key="frame" x="38" y="205" width="718.5" height="26"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="25" id="JW7-Rp-k05"/>
                             </constraints>
+                            <color key="minimumTrackTintColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="maximumTrackTintColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <action selector="changeBrightnessSlider:" destination="iN0-l3-epB" eventType="valueChanged" id="1xs-CA-OiG"/>
                             </connections>
                         </slider>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="色相" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5L4-XA-5hL">
-                            <rect key="frame" x="40" y="63.5" width="35" height="20.5"/>
+                            <rect key="frame" x="65" y="63.5" width="35" height="20.5"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="饱和度" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2DK-XY-bsi">
-                            <rect key="frame" x="40" y="123.5" width="52" height="20.5"/>
+                            <rect key="frame" x="65" y="123.5" width="52" height="20.5"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="亮度" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZeF-MT-y59">
-                            <rect key="frame" x="40" y="183.5" width="35" height="20.5"/>
+                            <rect key="frame" x="65" y="183.5" width="35" height="20.5"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                     </subviews>
                     <constraints>
-                        <constraint firstAttribute="trailing" secondItem="mOY-ZA-RQK" secondAttribute="trailing" constant="5" id="52q-9G-eYD"/>
-                        <constraint firstItem="WMl-VN-e2L" firstAttribute="leading" secondItem="5L4-XA-5hL" secondAttribute="leading" id="Ake-Mo-jeX"/>
+                        <constraint firstAttribute="trailing" secondItem="mOY-ZA-RQK" secondAttribute="trailing" constant="15" id="52q-9G-eYD"/>
+                        <constraint firstItem="WMl-VN-e2L" firstAttribute="leading" secondItem="5L4-XA-5hL" secondAttribute="leading" constant="-25" id="Ake-Mo-jeX"/>
                         <constraint firstItem="H2Y-1y-xLP" firstAttribute="top" secondItem="2DK-XY-bsi" secondAttribute="bottom" constant="1" id="CZh-XS-6Qr"/>
                         <constraint firstItem="mOY-ZA-RQK" firstAttribute="centerX" secondItem="WMl-VN-e2L" secondAttribute="centerX" id="EB9-WG-KPp"/>
                         <constraint firstItem="mOY-ZA-RQK" firstAttribute="top" secondItem="ZeF-MT-y59" secondAttribute="bottom" constant="1" id="LX0-Bf-swP"/>
@@ -145,7 +157,7 @@
                 <outlet property="shareBtn" destination="ZA7-sb-0UZ" id="3Ak-cr-hOo"/>
                 <outlet property="sliderView" destination="LOT-xg-a37" id="dki-EW-ivR"/>
             </connections>
-            <point key="canvasLocation" x="-239.13043478260872" y="-292.29910714285711"/>
+            <point key="canvasLocation" x="-239.13043478260872" y="-170.08928571428569"/>
         </view>
     </objects>
     <resources>

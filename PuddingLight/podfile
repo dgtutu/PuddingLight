@@ -1,8 +1,8 @@
 platform :ios,'10.0'
 target 'PuddingLight' do
-pod 'BabyBluetooth','~> 0.7.0'
 pod 'SwiftLint'
 pod 'nRFMeshProvision'
+pod 'swiftScan'
 # pod 'SideMenu', '~> 6.0'
 end
 

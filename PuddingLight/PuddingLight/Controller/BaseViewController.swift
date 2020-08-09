@@ -124,6 +124,9 @@ extension BaseViewController: CBCentralManagerDelegate , CBPeripheralDelegate{
         let data = characteristic.value
         if data != nil {
             let string = DataTool.convertData(toHexStr: data!)
+         
+            
+            print("-------------------------------")
             print("接收数据:\(string)")
         }
     }

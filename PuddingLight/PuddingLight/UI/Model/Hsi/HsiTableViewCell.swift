@@ -14,7 +14,6 @@ class HsiTableViewCell: UITableViewCell {
     var pointFlag: Bool?
     static var hueValue: Int = 180{
         didSet{
-            
             BlueToothTool.instance.setHsiMode(WithHue: hueValue, andSaturation: saturationValue)
         }
     }
@@ -33,8 +32,24 @@ class HsiTableViewCell: UITableViewCell {
     @IBOutlet weak var myImageView: UIImageView!
     @IBOutlet weak var drawView: DrawView!
     
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
+        NotificationCenter.default.addObserver(self, selector: #selector(onNotifition), name: Notification.Name("Colorimeter"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(onNotifition), name: Notification.Name("Hsi"), object: nil)
+    }
+    
+     @objc func onNotifition(notifi : Notification) {
+        hueValueLabel.text = "\(HsiTableViewCell.hueValue)"
+        saturationValueLabel.text = "\(HsiTableViewCell.saturationValue)"
+        brightnessValueLabel.text = "\(MainViewController.globalBrightnessValue)"
+        setUpPointWithColor(HsiTableViewCell.hueValue, HsiTableViewCell.saturationValue)
+        delegate?.setSliderValue()
+    }
+    
+    deinit {
+        NotificationCenter.default.removeObserver(self)
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -43,6 +58,7 @@ class HsiTableViewCell: UITableViewCell {
     
     override func layoutSubviews() {
         super.layoutSubviews()
+       
     }
     
     func setBrightess(brightness:Int) {
@@ -51,7 +67,7 @@ class HsiTableViewCell: UITableViewCell {
         BlueToothTool.instance.setBrightness(WithBrightness: brightness)
         brightnessValueLabel.text = "\(brightness )"
         if pointFlag == false{
-            let color = UIColor.init(hue: CGFloat(HsiTableViewCell.hueValue)/360.0, saturation: CGFloat(HsiTableViewCell.saturationValue )/100.0, brightness: CGFloat(MainViewController.globalBrightnessValue)/100.0, alpha:1.0)
+            let color = UIColor.init(hue: CGFloat(HsiTableViewCell.hueValue)/360.0, saturation: CGFloat(HsiTableViewCell.saturationValue )/100.0, brightness:( CGFloat(MainViewController.globalBrightnessValue)  * 0.5 + 50 )/100.0, alpha:1.0)
             myImageView.backgroundColor = color
         }
     }
@@ -72,23 +88,19 @@ class HsiTableViewCell: UITableViewCell {
     }
     
     func setUpPointWithColor(_ hue:Int ,_ saturation:Int )  {
-        
         hueValueLabel.text = "\(hue)"
         saturationValueLabel.text = "\(saturation)"
         brightnessValueLabel.text = "\(MainViewController.globalBrightnessValue)"
         let x:CGFloat = UIScreen.main.bounds.size.width * CGFloat(saturation) / 100.0
                let y:CGFloat = UIScreen.main.bounds.size.height * CGFloat(hue) / 360.0
         drawView.point = CGPoint.init(x:x, y:y)
-       // print(self)
         HsiTableViewCell.hueValue = hue
         HsiTableViewCell.saturationValue = saturation
-
-        
     }
     
     func setUpWithColor(_ hue:Int ,_ saturation:Int)  {
         
-        let color = UIColor.init(hue: CGFloat(hue)/360.0, saturation: CGFloat(saturation)/100.0, brightness: CGFloat(MainViewController.globalBrightnessValue)/100.0, alpha:1.0)
+        let color = UIColor.init(hue: CGFloat(hue)/360.0, saturation: CGFloat(saturation)/100.0, brightness:( CGFloat(MainViewController.globalBrightnessValue) * 0.5 + 50.0)/100.0, alpha:1.0)
         myImageView.backgroundColor = color
         pointFlag = false
         drawView.isHidden = true

@@ -9,7 +9,7 @@
 import UIKit
 
 class HsiMenu: UIView ,HsiTableViewCellDelegate {
-    
+    var qrCodeView:QrCodeView?
     @IBOutlet weak var preSetBtn: UIButton!
     @IBOutlet weak var scanBtn: UIButton!
     @IBOutlet weak var shareBtn: UIButton!
@@ -18,10 +18,44 @@ class HsiMenu: UIView ,HsiTableViewCellDelegate {
     @IBOutlet weak var saturationSlider: UISlider!
     @IBOutlet weak var brightnessSlider: UISlider!
     @IBOutlet weak var sliderView: UIView!
+    var toolbar:UIToolbar!
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        NotificationCenter.default.addObserver(self, selector: #selector(onNotifition), name: Notification.Name("QrcodeGoodBye"), object: nil)
+    }
+    
+    @objc func onNotifition(notifi : Notification) {
+        if toolbar != nil {
+            toolbar.removeFromSuperview()
+        }
+        
+    }
+    
+    deinit {
+        NotificationCenter.default.removeObserver(self)
+    }
+    
+    @IBAction func clickScanBtn(_ sender: Any) {
+        let vc = getControllerfromview(view: self) as! MainViewController
+        vc.performSegue(withIdentifier: "qrScan", sender: nil)
+        
+    }
+    
+    @IBAction func clickShareBtn(_ sender: Any) {
+        let vc = getControllerfromview(view: self) as! MainViewController
+        qrCodeView = vc.nibBundle?.loadNibNamed("QrCodeView", owner: vc, options: nil)?.first as? QrCodeView
+        qrCodeView?.center = vc.view.center
+        qrCodeView?.frame = vc.view.frame
+        qrCodeView?.content += DataTool.getQRDataString(3, colorHue: Int32(HsiTableViewCell.hueValue), colorSaturation: Int32(HsiTableViewCell.saturationValue), brightness: Int32(MainViewController.globalBrightnessValue))
+        toolbar = UIToolbar.init(frame: vc.view.frame)
+        toolbar.barStyle = .black
+        vc.view.addSubview(toolbar)
+        vc.view.addSubview(qrCodeView!)
+        
+    }
     
     func setSliderValue() {
-        let vc = getControllerfromview(view: self) as! MainViewController
-        let cell = vc.hsiTableView.visibleCells.first as! HsiTableViewCell
         hueSlider.value = Float(HsiTableViewCell.hueValue)/360.0
         saturationSlider.value = Float(HsiTableViewCell.saturationValue)/100.0
         brightnessSlider.value = Float(MainViewController.globalBrightnessValue)/100.0
@@ -60,7 +94,6 @@ class HsiMenu: UIView ,HsiTableViewCellDelegate {
     
     func getControllerfromview(view:UIView)->UIViewController?{
         var nextResponder: UIResponder? = self
-        
         repeat {
             nextResponder = nextResponder?.next
             
@@ -95,9 +128,6 @@ class HsiMenu: UIView ,HsiTableViewCellDelegate {
         scanBtn.isHidden = true
         shareBtn.isHidden = true
         preSetBtn.isHidden = true
-        
-        
-        
     }
     
     
@@ -115,5 +145,8 @@ class HsiMenu: UIView ,HsiTableViewCellDelegate {
         super.init(coder: coder)
         
     }
+    
+    
+    
     
 }

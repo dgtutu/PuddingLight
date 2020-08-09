@@ -37,27 +37,36 @@ class SeTableViewCell: UITableViewCell {
             //                cctBreathWhiteAnimation()
             case "呼吸灯·暖光":
                 cctBreathWramAnimation()
+                BlueToothTool.instance.setCCTMode(WithSpecialEffects: 4)
                 
             case "闪电·快":
                 cctThunderQuickAnimation()
+                BlueToothTool.instance.setCCTMode(WithSpecialEffects: 1)
             case "闪电·慢":
                 cctThunderSlowAnimation()
+                BlueToothTool.instance.setCCTMode(WithSpecialEffects: 2)
             default:
                 cctBreathWhiteAnimation()
+                BlueToothTool.instance.setCCTMode(WithSpecialEffects: 3)
             }
         case "RGB特效":
             switch style {
                 //            case "渐变·慢":
             //                rgbSlowAnimation()
             case "渐变·快":
+                BlueToothTool.instance.setRGBMode(WithSpecialEffects: 1)
                 rgbQuickAnimation()
             case "呼吸灯·红":
+                BlueToothTool.instance.setRGBMode(WithSpecialEffects: 3)
                 rAnimation()
             case "呼吸灯·绿":
+                BlueToothTool.instance.setRGBMode(WithSpecialEffects: 4)
                 gAnimation()
             case "呼吸灯·蓝":
+                BlueToothTool.instance.setRGBMode(WithSpecialEffects: 5)
                 bAnimation()
             default:
+                BlueToothTool.instance.setRGBMode(WithSpecialEffects: 2)
                 rgbSlowAnimation()
             }
             
@@ -66,10 +75,13 @@ class SeTableViewCell: UITableViewCell {
                 //            case "闪·红蓝":
             //                policeAnimation()
             case "闪·红":
+                BlueToothTool.instance.setPoliceMode(WithSpecialEffects: 2)
                 policeRedAnimation()
             case "闪·蓝":
+                BlueToothTool.instance.setPoliceMode(WithSpecialEffects: 3)
                 policeBlueAnimation()
             default:
+                BlueToothTool.instance.setPoliceMode(WithSpecialEffects: 1)
                 policeAnimation()
                 
             }

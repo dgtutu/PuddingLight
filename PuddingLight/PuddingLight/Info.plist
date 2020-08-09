@@ -49,6 +49,12 @@
 	</array>
 	<key>NSBluetoothAlwaysUsageDescription</key>
 	<string>BabyBluetooth能请求打开蓝牙</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>请允许APP访问您的相册</string>
+	<key>NSCameraUsageDescription</key>
+	<string>请允许APP访问您的相机</string>
+	<key>LSApplicationCategoryType</key>
+	<string>Privacy - Photo Library Additions Usage Description</string>
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
