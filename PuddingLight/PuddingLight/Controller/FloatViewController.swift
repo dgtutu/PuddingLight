@@ -31,15 +31,11 @@ class FloatViewController: BaseViewController,MainViewControllerDelegate {
             mainVc?.delegate = self
             //获得子控制器
         }
-        
-        //        if segue.identifier == "colorimeter" {
-        //            colorimeterVC = segue.destination as? ColorimeterViewController
-        //            colorimeterVC?.delegate = self
-        //        }
     }
     @IBAction func clickMenuViewBtn(_ sender: Any) {
         sideView.isHidden = false
         closeSideViewBtn.isHidden = false
+       // bleTool.discoveredPeripherals.removeAll()
         
     }
     

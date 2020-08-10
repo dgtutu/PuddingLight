@@ -133,7 +133,7 @@ class ColorimeterViewController: UIViewController ,AVCapturePhotoCaptureDelegate
     // 根据比例获取 frame
     func getFrameByProportion(proportion: CGFloat)   -> CGRect{
         
-        let screenSize = CGSize.init(width: 90, height: 60)
+        //let screenSize = CGSize.init(width: 90, height: 60)
         // let newSize = sizeWithSize(size: screenSize, proportion: proportion)
         return CGRect.init(x: 0, y: 0, width: 540, height: 960)
     }

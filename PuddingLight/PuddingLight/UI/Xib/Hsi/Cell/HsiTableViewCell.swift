@@ -24,27 +24,29 @@ class HsiTableViewCell: UITableViewCell {
     }
     //static var brightnessValue: Int = 100
     var delegate:HsiTableViewCellDelegate?
-
-    
     @IBOutlet weak var hueValueLabel: UILabel!
     @IBOutlet weak var saturationValueLabel: UILabel!
     @IBOutlet weak var brightnessValueLabel: UILabel!
     @IBOutlet weak var myImageView: UIImageView!
     @IBOutlet weak var drawView: DrawView!
     
-    
-    
+    //MARK: -加载通知
     override func awakeFromNib() {
         super.awakeFromNib()
         NotificationCenter.default.addObserver(self, selector: #selector(onNotifition), name: Notification.Name("Colorimeter"), object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(onNotifition), name: Notification.Name("Hsi"), object: nil)
     }
     
-     @objc func onNotifition(notifi : Notification) {
-        hueValueLabel.text = "\(HsiTableViewCell.hueValue)"
-        saturationValueLabel.text = "\(HsiTableViewCell.saturationValue)"
-        brightnessValueLabel.text = "\(MainViewController.globalBrightnessValue)"
-        setUpPointWithColor(HsiTableViewCell.hueValue, HsiTableViewCell.saturationValue)
+    @objc func onNotifition(notifi : Notification) {
+        //        hueValueLabel.text = "\(HsiTableViewCell.hueValue)"
+        //        saturationValueLabel.text = "\(HsiTableViewCell.saturationValue)"
+        //        brightnessValueLabel.text = "\(MainViewController.globalBrightnessValue)"
+        if pointFlag == true{
+            setUpPointWithColor(HsiTableViewCell.hueValue, HsiTableViewCell.saturationValue)
+        }else{
+            setUpWithColor(HsiTableViewCell.hueValue, HsiTableViewCell.saturationValue)
+        }
+        
         delegate?.setSliderValue()
     }
     
@@ -52,14 +54,16 @@ class HsiTableViewCell: UITableViewCell {
         NotificationCenter.default.removeObserver(self)
     }
     
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
     }
     
     override func layoutSubviews() {
         super.layoutSubviews()
-       
+        
     }
+    
     
     func setBrightess(brightness:Int) {
         
@@ -92,7 +96,7 @@ class HsiTableViewCell: UITableViewCell {
         saturationValueLabel.text = "\(saturation)"
         brightnessValueLabel.text = "\(MainViewController.globalBrightnessValue)"
         let x:CGFloat = UIScreen.main.bounds.size.width * CGFloat(saturation) / 100.0
-               let y:CGFloat = UIScreen.main.bounds.size.height * CGFloat(hue) / 360.0
+        let y:CGFloat = UIScreen.main.bounds.size.height * CGFloat(hue) / 360.0
         drawView.point = CGPoint.init(x:x, y:y)
         HsiTableViewCell.hueValue = hue
         HsiTableViewCell.saturationValue = saturation
@@ -112,6 +116,7 @@ class HsiTableViewCell: UITableViewCell {
         HsiTableViewCell.saturationValue = saturation
     }
     
+    //MARK: -触摸
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         var cgPoint:CGPoint = CGPoint.init()
         for touch:AnyObject in touches {
@@ -126,7 +131,7 @@ class HsiTableViewCell: UITableViewCell {
             saturationValueLabel.text = String(format: "%.0f", arguments: [drawView.point.x / self.bounds.size.width * 100])
         }
         delegate?.setSliderValue()
-
+        
     }
     
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {

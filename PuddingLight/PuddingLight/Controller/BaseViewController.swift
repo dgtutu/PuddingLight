@@ -33,8 +33,8 @@ extension BaseViewController: CBCentralManagerDelegate , CBPeripheralDelegate{
     func startScanning() {
         centralManager.delegate = self
         //搜索服务id为1828的 设备
-        centralManager.scanForPeripherals(withServices: [CBUUID(string: "1828")],  options: nil)
-      //  centralManager.scanForPeripherals(withServices: nil,  options: nil)
+//        centralManager.scanForPeripherals(withServices: [CBUUID(string: "1828")],  options: nil)
+        centralManager.scanForPeripherals(withServices: nil,  options: nil)
         print("开始扫描")
         
     }

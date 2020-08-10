@@ -26,6 +26,8 @@
 		B58FBBF224DE906D00970C48 /* QrCodeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B58FBBF124DE906D00970C48 /* QrCodeView.xib */; };
 		B58FBBF924DEA83300970C48 /* QrScan.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B58FBBF824DEA83300970C48 /* QrScan.storyboard */; };
 		B58FBBFB24DEA90200970C48 /* QrScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B58FBBFA24DEA90200970C48 /* QrScanViewController.swift */; };
+		B59B0FF824DF83BC00AA7952 /* HsiPreset.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59B0FF724DF83BC00AA7952 /* HsiPreset.swift */; };
+		B59B0FFA24DF83DE00AA7952 /* HsiPreset.xib in Resources */ = {isa = PBXBuildFile; fileRef = B59B0FF924DF83DE00AA7952 /* HsiPreset.xib */; };
 		B5D8D3E324D26E2000236D6F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D8D3E224D26E2000236D6F /* AppDelegate.swift */; };
 		B5D8D3E524D26E2000236D6F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D8D3E424D26E2000236D6F /* SceneDelegate.swift */; };
 		B5D8D3EA24D26E2000236D6F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5D8D3E824D26E2000236D6F /* Main.storyboard */; };
@@ -65,6 +67,8 @@
 		B58FBBF124DE906D00970C48 /* QrCodeView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QrCodeView.xib; sourceTree = "<group>"; };
 		B58FBBF824DEA83300970C48 /* QrScan.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = QrScan.storyboard; sourceTree = "<group>"; };
 		B58FBBFA24DEA90200970C48 /* QrScanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QrScanViewController.swift; sourceTree = "<group>"; };
+		B59B0FF724DF83BC00AA7952 /* HsiPreset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HsiPreset.swift; sourceTree = "<group>"; };
+		B59B0FF924DF83DE00AA7952 /* HsiPreset.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HsiPreset.xib; sourceTree = "<group>"; };
 		B5D8D3DF24D26E2000236D6F /* PuddingLight.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PuddingLight.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5D8D3E224D26E2000236D6F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B5D8D3E424D26E2000236D6F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -115,12 +119,9 @@
 		B524269124D56F7400776B3F /* Hsi */ = {
 			isa = PBXGroup;
 			children = (
-				B5D8D42324D3F13D00236D6F /* HsiTableViewCell.swift */,
-				B5D8D42424D3F13D00236D6F /* HsiTableViewCell.xib */,
-				B524268724D476C000776B3F /* DrawView.swift */,
-				B5D8D41F24D3F0E800236D6F /* HsiDelegate.swift */,
-				B524268D24D51FF200776B3F /* HsiMenu.swift */,
-				B524268F24D5200200776B3F /* HsiMenu.xib */,
+				B59B0FF624DF820500AA7952 /* Preset */,
+				B59B0FF424DF81D500AA7952 /* Menu */,
+				B59B0FFB24DF878300AA7952 /* Cell */,
 			);
 			path = Hsi;
 			sourceTree = "<group>";
@@ -140,8 +141,7 @@
 				B5D8D42E24D44D2300236D6F /* SeDelegate.swift */,
 				B5D8D43024D44DC600236D6F /* SeTableViewCell.swift */,
 				B5D8D43124D44DC600236D6F /* SeTableViewCell.xib */,
-				B58FBBD124DD2C1800970C48 /* SeMenu.swift */,
-				B58FBBD324DD2C2400970C48 /* SeMenu.xib */,
+				B59B0FF524DF81EB00AA7952 /* Menu */,
 			);
 			path = Se;
 			sourceTree = "<group>";
@@ -153,6 +153,44 @@
 				B58FBBF124DE906D00970C48 /* QrCodeView.xib */,
 			);
 			path = QRcode;
+			sourceTree = "<group>";
+		};
+		B59B0FF424DF81D500AA7952 /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				B524268D24D51FF200776B3F /* HsiMenu.swift */,
+				B524268F24D5200200776B3F /* HsiMenu.xib */,
+			);
+			path = Menu;
+			sourceTree = "<group>";
+		};
+		B59B0FF524DF81EB00AA7952 /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				B58FBBD124DD2C1800970C48 /* SeMenu.swift */,
+				B58FBBD324DD2C2400970C48 /* SeMenu.xib */,
+			);
+			path = Menu;
+			sourceTree = "<group>";
+		};
+		B59B0FF624DF820500AA7952 /* Preset */ = {
+			isa = PBXGroup;
+			children = (
+				B59B0FF724DF83BC00AA7952 /* HsiPreset.swift */,
+				B59B0FF924DF83DE00AA7952 /* HsiPreset.xib */,
+			);
+			path = Preset;
+			sourceTree = "<group>";
+		};
+		B59B0FFB24DF878300AA7952 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				B5D8D42324D3F13D00236D6F /* HsiTableViewCell.swift */,
+				B5D8D42424D3F13D00236D6F /* HsiTableViewCell.xib */,
+				B524268724D476C000776B3F /* DrawView.swift */,
+				B5D8D41F24D3F0E800236D6F /* HsiDelegate.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		B5D8D3D624D26E2000236D6F = {
@@ -190,7 +228,7 @@
 		B5D8D40424D2AEFE00236D6F /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				B5D8D40624D2AF2300236D6F /* Model */,
+				B5D8D40624D2AF2300236D6F /* Xib */,
 				B5D8D3ED24D26E2100236D6F /* LaunchScreen.storyboard */,
 				B58FBBF824DEA83300970C48 /* QrScan.storyboard */,
 				B5D8D3E824D26E2000236D6F /* Main.storyboard */,
@@ -205,8 +243,8 @@
 				B5D8D41924D3C56900236D6F /* BaseViewController.swift */,
 				B524268924D5104800776B3F /* MainViewController.swift */,
 				B5D8D41724D3B84E00236D6F /* FloatViewController.swift */,
-				B506C82224DAAA44002F07FF /* BlueToothTool.swift */,
 				B506C82E24DB99A5002F07FF /* DeviceCell.swift */,
+				B506C82224DAAA44002F07FF /* BlueToothTool.swift */,
 				B506C82024DA9870002F07FF /* ConnectingViewController.swift */,
 				B58FBBDA24DD40C300970C48 /* ColorimeterViewController.swift */,
 				B58FBBFA24DEA90200970C48 /* QrScanViewController.swift */,
@@ -214,7 +252,7 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
-		B5D8D40624D2AF2300236D6F /* Model */ = {
+		B5D8D40624D2AF2300236D6F /* Xib */ = {
 			isa = PBXGroup;
 			children = (
 				B58FBBEE24DE8C1700970C48 /* QRcode */,
@@ -222,7 +260,7 @@
 				B524269224D5741100776B3F /* Cct */,
 				B524269124D56F7400776B3F /* Hsi */,
 			);
-			path = Model;
+			path = Xib;
 			sourceTree = "<group>";
 		};
 		EE4320B92E38F981AD7AFCB4 /* Pods */ = {
@@ -295,6 +333,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B58FBBD924DD3F8100970C48 /* Colorimeter.storyboard in Resources */,
+				B59B0FFA24DF83DE00AA7952 /* HsiPreset.xib in Resources */,
 				B58FBBD424DD2C2400970C48 /* SeMenu.xib in Resources */,
 				B5D8D42624D3F13D00236D6F /* HsiTableViewCell.xib in Resources */,
 				B524269024D5200200776B3F /* HsiMenu.xib in Resources */,
@@ -358,6 +397,7 @@
 				B58FBBD224DD2C1800970C48 /* SeMenu.swift in Sources */,
 				B58FBBFB24DEA90200970C48 /* QrScanViewController.swift in Sources */,
 				B58FBBF024DE906400970C48 /* QrCodeView.swift in Sources */,
+				B59B0FF824DF83BC00AA7952 /* HsiPreset.swift in Sources */,
 				B5D8D42024D3F0E800236D6F /* HsiDelegate.swift in Sources */,
 				B506C82124DA9870002F07FF /* ConnectingViewController.swift in Sources */,
 			);
